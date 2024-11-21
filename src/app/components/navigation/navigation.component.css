@@ -1,0 +1,19 @@
+:host {
+  @apply text-white w-40;
+}
+
+nav {
+  background-color: var(--lighter);
+}
+
+button {
+  @apply py-3 w-full flex items-start pl-10;
+}
+
+button:hover {
+  background: var(--dark);
+}
+
+.logout {
+  color: var(--secondary);
+}

@@ -1,0 +1,10 @@
+<main class="flex justify-center">
+  <form #form="ngForm" (ngSubmit)="submitForm()">
+    <input type="email" [(ngModel)]="email" placeholder="Email" name="name" />
+    <button type="submit">Rögzít</button>
+    <span class="error">{{ errorMessage }}</span>
+    <span class="spinner" *ngIf="showSpinner"
+      ><mat-spinner color="warn"></mat-spinner
+    ></span>
+  </form>
+</main>

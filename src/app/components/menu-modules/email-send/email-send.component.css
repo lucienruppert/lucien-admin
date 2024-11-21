@@ -1,0 +1,8 @@
+:host {
+  @apply text-white;
+}
+
+button {
+  background-color: var(--secondary);
+  @apply rounded-md p-2 w-40 h-10 mt-20 ml-20;
+}
