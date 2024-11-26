@@ -9,7 +9,7 @@ import { AuthenticationService } from '../../services/authentication.service';
   standalone: true,
   templateUrl: "./login.component.html",
   styleUrls: ["./login.component.css"],
-  imports: [FormsModule, NgStyle, MatProgressSpinnerModule, NgIf],
+  imports: [FormsModule, MatProgressSpinnerModule, NgIf],
 })
 export class LoginComponent {
   public email: string = "";
