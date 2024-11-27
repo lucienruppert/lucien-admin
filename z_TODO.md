@@ -1,24 +1,19 @@
+**Email Leiratkozás**
+  
+[ ] Nézzük, hogy melyik domainről jött a feliratkozás, és akkor arról a domainről küldjünk ki neki egy vissazigazoló emailt.
 
-  # EMAIL LEIRATKOZÁS
-  =================================
+**Email Leiratkozás**
+  
+[ ] Egy klikkel
 
-    - Egy klikkel
+**Email Kiküldés**
 
-  # EMAIL KIKÜLDÉS
-  =================================
+[ ] Ki lehet választani a küldő domaint.
 
-    - Ki lehet választani a küldő domaint.
-
-  # EGYSZERŰ EMAIL ÖSSZERAKÓ FELÜLET
-  =================================
-
-
-  # KÉSŐBB
-  ====================================
+**Egyszerű Email Összerakó Felület**
+  
+**Később**
     
-    - Tömeges email feltöltés excelből 
-    - Email hozzáadásnál hozzáadja az owners és a projektet is
-    - Az owner beírhatja a domainjeit
-
-
-----
+[ ] Tömeges email feltöltés excelből 
+[ ] Email hozzáadásnál hozzáadja az owners és a projektet is
+[ ] Az owner beírhatja a domainjeit
