@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from "@angular/forms";
-import { NgIf, NgStyle } from '@angular/common';
+import { NgIf } from '@angular/common';
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { AuthenticationService } from '../../services/authentication.service';
 
