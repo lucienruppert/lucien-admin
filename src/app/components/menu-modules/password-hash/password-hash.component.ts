@@ -16,6 +16,7 @@ export class PasswordHashComponent {
   public password: string = "";
   public errorMessage: string = "";
   public showSpinner: boolean = false;
+  public hash: string = "";
 
   constructor(
     private snackbar: SnackBarService,
@@ -26,14 +27,24 @@ export class PasswordHashComponent {
     this.showSpinner = true;
     let snackbarMessage: string = "";
     try {
-      await this.passwordHash.setHashFor(this.password);
-      snackbarMessage = "A hashelés sikerült.";
+      this.hash = await this.passwordHash.setHashFor(this.password);
+      console.log(this.hash);
+      snackbarMessage = "Hash kimásolva, beillesztésre készen!";
       this.snackbar.showSnackBar(snackbarMessage);
+      this.copyText();
       this.password = "";
     } catch (error: unknown) {
       const typedError = error as string;
       this.errorMessage = typedError;
     }
     this.showSpinner = false;
+  }
+
+  private copyText(): void {
+    navigator.clipboard
+      .writeText(this.hash)
+      .catch((error) => {
+        this.errorMessage = "Failed to copy text: ", error;
+      });
   }
 }

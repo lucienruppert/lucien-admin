@@ -16,13 +16,12 @@ export class PasswordHashService {
   public async setHashFor(password: string): Promise<string> {
 
     try {
-      const result$ = this.http.post<string>(
+      const result$ = this.http.post<{ hash: string }>(
         `${this.baseUrl}/password/hash`,
         { password }
       );
       const result = await firstValueFrom(result$);
-      console.log(result)
-      return result;
+      return result.hash;
     } catch (error: unknown) {
       const typedError = error as HttpErrorResponse;
       if (typedError.error["errors"]) throw typedError.error["errors"];
