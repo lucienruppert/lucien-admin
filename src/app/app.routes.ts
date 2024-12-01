@@ -6,6 +6,7 @@ import { AuthRedirectGuardService } from "./services/auth-redirect-guard.service
 import { DashboardComponent } from "./components/menu-modules/dashboard/dashboard.component";
 import { EmailUploadComponent } from "./components/menu-modules/email-upload/email-upload.component";
 import { EmailSendComponent } from "./components/menu-modules/email-send/email-send.component";
+import { PasswordHashComponent } from "./components/menu-modules/password-hash/password-hash.component";
 
 export const routes: Routes = [
   {
@@ -23,12 +24,16 @@ export const routes: Routes = [
         component: DashboardComponent,
       },
       {
-        path: "email-upload",
+        path: "email/add",
         component: EmailUploadComponent,
       },
       {
-        path: "email-send",
+        path: "email/send",
         component: EmailSendComponent,
+      },
+      {
+        path: "password/hash",
+        component: PasswordHashComponent,
       },
     ],
   },

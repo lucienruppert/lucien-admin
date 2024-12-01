@@ -7,11 +7,15 @@ nav {
 }
 
 button {
-  @apply py-3 w-full flex items-start pl-10;
+  @apply py-1 w-full flex items-start pl-10;
 }
 
 button:hover {
   background: var(--dark);
+}
+
+button.selected {
+  background: var(--secondary); 
 }
 
 .logout {
