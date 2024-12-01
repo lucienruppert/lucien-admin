@@ -19,6 +19,11 @@ export class AuthRedirectGuardService {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): boolean | Promise<boolean> {
-    return !this.authentication.getUserEmail() || this.router.navigate(["/main"]);
+    const isAuthenticated = this.authentication.getUserEmail();
+    if (isAuthenticated) {
+      this.router.navigate(["/main"]);
+      return false;
+    }
+    return true;
   }
 }

@@ -19,6 +19,11 @@ export class GeneralRouteGuardService {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): boolean | Promise<boolean> {
-    return !!this.authentication.getUserEmail() || this.router.navigate(["/"]);
+    if (this.authentication.getUserEmail()) {
+      return true;
+    } else {
+      this.router.navigate(["/"]);
+      return false;
+    }
   }
 }
