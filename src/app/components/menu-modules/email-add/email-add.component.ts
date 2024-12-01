@@ -6,13 +6,13 @@ import { SnackBarService } from '../../../services/snackbar.service';
 import { EmailService } from '../../../services/email.service';
 
 @Component({
-  selector: "app-email-upload",
-  templateUrl: "./email-upload.component.html",
-  styleUrls: ["./email-upload.component.css"],
+  selector: "app-email-add",
+  templateUrl: "./email-add.component.html",
+  styleUrls: ["./email-add.component.css"],
   standalone: true,
   imports: [FormsModule, MatProgressSpinnerModule, NgIf],
 })
-export class EmailUploadComponent {
+export class EmailAddComponent {
   public email: string = "";
   public errorMessage: string = "";
   public showSpinner: boolean = false;
