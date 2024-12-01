@@ -1,7 +1,7 @@
 <nav class="flex flex-col h-screen cursor-pointer -scroll-mt-3">
-  <button (click)="navigateTo('')" class="mb-10">Főoldal</button>
-  <button (click)="navigateTo('email/add')">Hozzáadás</button>
-  <button (click)="navigateTo('email/send')">Küldés</button>
-  <button (click)="navigateTo('password/hash')">Jelszó</button>
+  <button (click)="navigateTo('')" [ngClass]="{'selected': selectedRoute === ''}" class="mb-10">Főoldal</button>
+  <button (click)="navigateTo('email/add')" [ngClass]="{'selected': selectedRoute === 'email/add'}">Hozzáadás</button>
+  <button (click)="navigateTo('email/send')" [ngClass]="{'selected': selectedRoute === 'email/send'}">Küldés</button>
+  <button (click)="navigateTo('password/hash')" [ngClass]="{'selected': selectedRoute === 'password/hash'}">Jelszó</button>
   <button (click)="logout()" class="logout mt-10">Kilépés</button>
 </nav>
