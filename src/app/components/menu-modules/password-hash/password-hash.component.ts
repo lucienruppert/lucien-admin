@@ -27,7 +27,7 @@ export class PasswordHashComponent {
     let snackbarMessage: string = "";
     try {
       await this.passwordHash.setHashFor(this.password);
-      snackbarMessage = "Az email hozzáadása sikerült.";
+      snackbarMessage = "A hashelés sikerült.";
       this.snackbar.showSnackBar(snackbarMessage);
       this.password = "";
     } catch (error: unknown) {
